@@ -17,6 +17,6 @@ namespace Golf.Data.EF
             base.OnModelCreating(modelBuilder);
         }
 
-        public DbSet<Round> Rounds { get; set; }
+        public virtual DbSet<Round> Rounds { get; set; }
     }
 }
