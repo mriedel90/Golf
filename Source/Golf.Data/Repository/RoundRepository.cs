@@ -1,6 +1,7 @@
 ﻿using Golf.Data.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Core;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,32 +19,48 @@ namespace Golf.Data.Repository
             _db = db;
         }
 
-        public int CreateRound(RoundModel model)
+        public RoundModel CreateOrUpdateRound(RoundModel model)
         {
-            var round = new Round()
+            Round round;
+            if (model.Id == 0)
             {
-                TeeTime = model.TeeTime
-            };
+                round = new Round();
+                _db.Rounds.Add(round);
+            }
+            else
+            {
+                round = _db.Rounds.FirstOrDefault(x => x.Id == model.Id);
+                if (round == null) throw new ObjectNotFoundException($"Round with Id: {model.Id} does not exist");
+            }
 
-            round = _db.Rounds.Add(round);
+            round.TeeTime = model.TeeTime;
             _db.SaveChanges();
 
-            return round.Id;
+            return new RoundModel()
+            {
+                Id = round.Id,
+                TeeTime = round.TeeTime
+            };
         }
 
         public void DeleteRound(int id)
         {
-            throw new NotImplementedException();
+            var round = _db.Rounds.FirstOrDefault(x => x.Id == id);
+            if (round == null) throw new ObjectNotFoundException($"Round with Id: {id} does not exist");
+            _db.Rounds.Remove(round);
+            _db.SaveChanges();
         }
 
         public RoundModel GetRound(int id)
         {
-            throw new NotImplementedException();
-        }
-
-        public void UpdateRound(RoundModel model)
-        {
-            throw new NotImplementedException();
+            var round = _db.Rounds.FirstOrDefault(x => x.Id == id);
+            if (round == null) return null;
+            var model = new RoundModel()
+            {
+                Id = round.Id,
+                TeeTime = round.TeeTime
+            };
+            return model;
         }
     }
 }

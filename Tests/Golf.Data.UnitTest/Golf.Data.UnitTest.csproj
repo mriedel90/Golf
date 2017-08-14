@@ -65,6 +65,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -82,7 +83,8 @@
   </Choose>
   <ItemGroup>
     <Compile Include="RepositoryBase.cs" />
-    <Compile Include="RoundRepository\when_reading_rounds.cs" />
+    <Compile Include="RoundRepositoryTests\when_creating_or_updating_rounds.cs" />
+    <Compile Include="RoundRepositoryTests\when_reading_rounds.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
