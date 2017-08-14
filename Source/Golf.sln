@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{02732746
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Golf.Models", "Golf.Models\Golf.Models.csproj", "{E2A4416A-69AA-4D44-AA91-D75808987D7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Golf.Data.UnitTest", "Golf.Data.UnitTest\Golf.Data.UnitTest.csproj", "{57056731-92EB-4ECA-950D-7F6BFB596F9C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Golf.Data.UnitTest", "..\Tests\Golf.Data.UnitTest\Golf.Data.UnitTest.csproj", "{57056731-92EB-4ECA-950D-7F6BFB596F9C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
