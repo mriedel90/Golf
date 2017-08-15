@@ -84,6 +84,7 @@
   <ItemGroup>
     <Compile Include="RepositoryBase.cs" />
     <Compile Include="RoundRepositoryTests\when_creating_or_updating_rounds.cs" />
+    <Compile Include="RoundRepositoryTests\when_deleting_rounds.cs" />
     <Compile Include="RoundRepositoryTests\when_reading_rounds.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
