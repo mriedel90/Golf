@@ -5,18 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using Golf.Data.EF;
-using FakeItEasy;
 
-namespace Golf.Data.UnitTest
+namespace Golf.Data.IntegrationTest
 {
     public class RepositoryBase
     {
-        public GolfDataContext _fakeContext;
+        public GolfDataContext _context;
 
-        [SetUp]
+        [OneTimeSetUp]
         public void BaseSetup()
         {
-            _fakeContext = A.Fake<GolfDataContext>();
+            _context = new GolfDataContext();
+        }
+
+        [OneTimeTearDown]
+        public void BaseTearDown()
+        {
+            _context.Dispose();
         }
 
     }

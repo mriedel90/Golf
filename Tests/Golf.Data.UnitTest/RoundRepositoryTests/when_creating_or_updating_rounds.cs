@@ -23,8 +23,8 @@ namespace Golf.Data.UnitTest.RoundRepositoryTests
         [SetUp]
         public void Setup()
         {
-            _repo = new RoundRepository(_fakeDb);
-            A.CallTo(() => _fakeDb.Rounds).Returns(A.Fake<DbSet<Round>>(o => o.Implements(typeof(IQueryable<Round>)).Implements(typeof(IDbAsyncEnumerable<Round>)))
+            _repo = new RoundRepository(_fakeContext);
+            A.CallTo(() => _fakeContext.Rounds).Returns(A.Fake<DbSet<Round>>(o => o.Implements(typeof(IQueryable<Round>)).Implements(typeof(IDbAsyncEnumerable<Round>)))
                 .SetupData(new List<Round>
                 {
                     new Round() { Id = 1, TeeTime = DateTime.Now.AddDays(-10) }
@@ -45,9 +45,9 @@ namespace Golf.Data.UnitTest.RoundRepositoryTests
             var result = _repo.CreateOrUpdateRound(fakeRoundModel);
 
             //Assert
-            A.CallTo(() => _fakeDb.Rounds.Add(A<Round>.Ignored)).MustHaveHappened();
-            A.CallTo(() => _fakeDb.SaveChanges()).MustHaveHappened();
-            Assert.AreEqual(2, _fakeDb.Rounds.Count());
+            A.CallTo(() => _fakeContext.Rounds.Add(A<Round>.Ignored)).MustHaveHappened();
+            A.CallTo(() => _fakeContext.SaveChanges()).MustHaveHappened();
+            Assert.AreEqual(2, _fakeContext.Rounds.Count());
             Assert.IsNotNull(result);
             Assert.AreEqual(fakeRoundModel.TeeTime, result.TeeTime);
         }
@@ -67,9 +67,9 @@ namespace Golf.Data.UnitTest.RoundRepositoryTests
             
             //Assert
             Assert.That(createOrUpdateRoundTestDelegate, Throws.TypeOf<ObjectNotFoundException>().With.Message.EqualTo("Round with Id: 2 does not exist"));
-            A.CallTo(() => _fakeDb.Rounds.Add(A<Round>.Ignored)).MustNotHaveHappened();
-            A.CallTo(() => _fakeDb.SaveChanges()).MustNotHaveHappened();
-            Assert.AreEqual(1, _fakeDb.Rounds.Count());
+            A.CallTo(() => _fakeContext.Rounds.Add(A<Round>.Ignored)).MustNotHaveHappened();
+            A.CallTo(() => _fakeContext.SaveChanges()).MustNotHaveHappened();
+            Assert.AreEqual(1, _fakeContext.Rounds.Count());
         }
 
         [Test]
@@ -86,11 +86,11 @@ namespace Golf.Data.UnitTest.RoundRepositoryTests
             var result = _repo.CreateOrUpdateRound(fakeRoundModel);
 
             //Assert
-            A.CallTo(() => _fakeDb.Rounds.Add(A<Round>.Ignored)).MustNotHaveHappened();
-            A.CallTo(() => _fakeDb.SaveChanges()).MustHaveHappened();
+            A.CallTo(() => _fakeContext.Rounds.Add(A<Round>.Ignored)).MustNotHaveHappened();
+            A.CallTo(() => _fakeContext.SaveChanges()).MustHaveHappened();
             Assert.IsNotNull(result);
             Assert.AreEqual(fakeRoundModel.TeeTime, result.TeeTime);
-            Assert.AreEqual(1, _fakeDb.Rounds.Count());
+            Assert.AreEqual(1, _fakeContext.Rounds.Count());
         }
     }
 }

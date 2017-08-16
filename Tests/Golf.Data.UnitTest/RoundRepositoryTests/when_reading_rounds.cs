@@ -20,8 +20,8 @@ namespace Golf.Data.UnitTest.RoundRepositoryTests
         [SetUp]
         public void Setup()
         {
-            _repo = new RoundRepository(_fakeDb);
-            A.CallTo(() => _fakeDb.Rounds).Returns(A.Fake<DbSet<Round>>(o => o.Implements(typeof(IQueryable<Round>)).Implements(typeof(IDbAsyncEnumerable<Round>)))
+            _repo = new RoundRepository(_fakeContext);
+            A.CallTo(() => _fakeContext.Rounds).Returns(A.Fake<DbSet<Round>>(o => o.Implements(typeof(IQueryable<Round>)).Implements(typeof(IDbAsyncEnumerable<Round>)))
                 .SetupData(new List<Round>
                 {
                     new Round() { Id = 1, TeeTime = DateTime.Now.AddDays(-10) }

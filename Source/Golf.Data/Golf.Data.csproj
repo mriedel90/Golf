@@ -50,9 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EF\GolfDataContext.cs" />
-    <Compile Include="EF\Migrations\201708130207334_initial.cs" />
-    <Compile Include="EF\Migrations\201708130207334_initial.Designer.cs">
-      <DependentUpon>201708130207334_initial.cs</DependentUpon>
+    <Compile Include="EF\Migrations\201708161539297_initial.cs" />
+    <Compile Include="EF\Migrations\201708161539297_initial.Designer.cs">
+      <DependentUpon>201708161539297_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="EF\Migrations\Configuration.cs" />
     <Compile Include="Entities\EntityBase.cs" />
@@ -66,15 +66,15 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="EF\Migrations\201708130207334_initial.resx">
-      <DependentUpon>201708130207334_initial.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Golf.Models\Golf.Models.csproj">
       <Project>{e2a4416a-69aa-4d44-aa91-d75808987d7e}</Project>
       <Name>Golf.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EF\Migrations\201708161539297_initial.resx">
+      <DependentUpon>201708161539297_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

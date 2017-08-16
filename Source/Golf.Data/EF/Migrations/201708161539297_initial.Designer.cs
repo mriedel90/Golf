@@ -13,7 +13,7 @@ namespace Golf.Data.EF.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201708130207334_initial"; }
+            get { return "201708161539297_initial"; }
         }
         
         string IMigrationMetadata.Source

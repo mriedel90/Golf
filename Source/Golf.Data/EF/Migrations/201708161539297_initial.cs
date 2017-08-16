@@ -12,7 +12,7 @@ namespace Golf.Data.EF.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        DatePlayed = c.DateTime(nullable: false),
+                        TeeTime = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
