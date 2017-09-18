@@ -15,25 +15,24 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Golf.Data.IntegrationTests"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Golf.WebApi", "Golf.WebApi\Golf.WebApi.csproj", "{B35FC78B-8882-4796-8AFF-AE5DC77EE6D8}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Golf.Web", "Golf.Web\", "{C7CD6C35-98D9-480A-B2A3-C0DF798BCE12}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "src", "Golf.Angular\src\", "{E98BDF17-3D7B-4221-8AF6-D0AEE2135253}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_52538"
-		Debug.AspNetCompiler.PhysicalPath = "Golf.Web\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52538\"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52849"
+		Debug.AspNetCompiler.PhysicalPath = "Golf.Angular\src\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52849\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_52538"
-		Release.AspNetCompiler.PhysicalPath = "Golf.Web\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52538\"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52849"
+		Release.AspNetCompiler.PhysicalPath = "Golf.Angular\src\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52849\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "52538"
-		SlnRelativePath = "Golf.Web\"
+		VWDPort = "52849"
 	EndProjectSection
 EndProject
 Global
@@ -128,22 +127,22 @@ Global
 		{B35FC78B-8882-4796-8AFF-AE5DC77EE6D8}.Release|x64.Build.0 = Release|Any CPU
 		{B35FC78B-8882-4796-8AFF-AE5DC77EE6D8}.Release|x86.ActiveCfg = Release|Any CPU
 		{B35FC78B-8882-4796-8AFF-AE5DC77EE6D8}.Release|x86.Build.0 = Release|Any CPU
-		{C7CD6C35-98D9-480A-B2A3-C0DF798BCE12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C7CD6C35-98D9-480A-B2A3-C0DF798BCE12}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C7CD6C35-98D9-480A-B2A3-C0DF798BCE12}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{C7CD6C35-98D9-480A-B2A3-C0DF798BCE12}.Debug|ARM.Build.0 = Debug|Any CPU
-		{C7CD6C35-98D9-480A-B2A3-C0DF798BCE12}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{C7CD6C35-98D9-480A-B2A3-C0DF798BCE12}.Debug|x64.Build.0 = Debug|Any CPU
-		{C7CD6C35-98D9-480A-B2A3-C0DF798BCE12}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{C7CD6C35-98D9-480A-B2A3-C0DF798BCE12}.Debug|x86.Build.0 = Debug|Any CPU
-		{C7CD6C35-98D9-480A-B2A3-C0DF798BCE12}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{C7CD6C35-98D9-480A-B2A3-C0DF798BCE12}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{C7CD6C35-98D9-480A-B2A3-C0DF798BCE12}.Release|ARM.ActiveCfg = Debug|Any CPU
-		{C7CD6C35-98D9-480A-B2A3-C0DF798BCE12}.Release|ARM.Build.0 = Debug|Any CPU
-		{C7CD6C35-98D9-480A-B2A3-C0DF798BCE12}.Release|x64.ActiveCfg = Debug|Any CPU
-		{C7CD6C35-98D9-480A-B2A3-C0DF798BCE12}.Release|x64.Build.0 = Debug|Any CPU
-		{C7CD6C35-98D9-480A-B2A3-C0DF798BCE12}.Release|x86.ActiveCfg = Debug|Any CPU
-		{C7CD6C35-98D9-480A-B2A3-C0DF798BCE12}.Release|x86.Build.0 = Debug|Any CPU
+		{E98BDF17-3D7B-4221-8AF6-D0AEE2135253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E98BDF17-3D7B-4221-8AF6-D0AEE2135253}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E98BDF17-3D7B-4221-8AF6-D0AEE2135253}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{E98BDF17-3D7B-4221-8AF6-D0AEE2135253}.Debug|ARM.Build.0 = Debug|Any CPU
+		{E98BDF17-3D7B-4221-8AF6-D0AEE2135253}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E98BDF17-3D7B-4221-8AF6-D0AEE2135253}.Debug|x64.Build.0 = Debug|Any CPU
+		{E98BDF17-3D7B-4221-8AF6-D0AEE2135253}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E98BDF17-3D7B-4221-8AF6-D0AEE2135253}.Debug|x86.Build.0 = Debug|Any CPU
+		{E98BDF17-3D7B-4221-8AF6-D0AEE2135253}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{E98BDF17-3D7B-4221-8AF6-D0AEE2135253}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{E98BDF17-3D7B-4221-8AF6-D0AEE2135253}.Release|ARM.ActiveCfg = Debug|Any CPU
+		{E98BDF17-3D7B-4221-8AF6-D0AEE2135253}.Release|ARM.Build.0 = Debug|Any CPU
+		{E98BDF17-3D7B-4221-8AF6-D0AEE2135253}.Release|x64.ActiveCfg = Debug|Any CPU
+		{E98BDF17-3D7B-4221-8AF6-D0AEE2135253}.Release|x64.Build.0 = Debug|Any CPU
+		{E98BDF17-3D7B-4221-8AF6-D0AEE2135253}.Release|x86.ActiveCfg = Debug|Any CPU
+		{E98BDF17-3D7B-4221-8AF6-D0AEE2135253}.Release|x86.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
