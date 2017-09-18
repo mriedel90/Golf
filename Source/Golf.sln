@@ -33,6 +33,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Golf.Web", "Golf.Web\", "{C
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "52538"
+		SlnRelativePath = "Golf.Web\"
 	EndProjectSection
 EndProject
 Global
